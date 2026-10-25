@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sanctions Territory Reference</title>
+<meta name="description" content="A versioned mapping of comprehensively sanctioned territories to the ISO 3166 identifiers that geolocation systems return, with a coverage checker that runs entirely in your browser.">
+<style>
+  :root{
+    --bg:#fbfbfa; --fg:#1a1a1a; --mut:#5f6570; --line:#d9dce2; --soft:#f1f3f7;
+    --acc:#1f3864; --warn:#8a3a00; --warnbg:#fdf3ea; --bad:#8d1f1f; --badbg:#fdeeee;
+    --ok:#1b5e20; --okbg:#eef6ee;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#14161a; --fg:#e9eaec; --mut:#9aa1ad; --line:#2c3038; --soft:#1b1e24;
+      --acc:#9db6e8; --warn:#e0a060; --warnbg:#2a2017; --bad:#e78d8d; --badbg:#2a1a1a;
+      --ok:#8fd396; --okbg:#18241a;
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--fg);
+       font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif}
+  .wrap{max-width:62rem;margin:0 auto;padding:2.5rem 1.25rem 4rem}
+  header{border-bottom:2px solid var(--acc);padding-bottom:1rem;margin-bottom:1.75rem}
+  h1{margin:0 0 .3rem;font-size:1.75rem;letter-spacing:-.01em}
+  .sub{color:var(--mut);font-size:.95rem;margin:0}
+  h2{font-size:1.2rem;margin:2.5rem 0 .75rem;color:var(--acc)}
+  h3{font-size:1rem;margin:1.5rem 0 .5rem}
+  p{margin:0 0 1rem}
+  .lede{font-size:1.02rem}
+  .finding{border-left:3px solid var(--acc);background:var(--soft);
+           padding:.85rem 1rem;margin:1rem 0;border-radius:0 4px 4px 0}
+  .finding b{display:block;margin-bottom:.25rem}
+  table{border-collapse:collapse;width:100%;font-size:.86rem;margin:1rem 0}
+  th,td{border:1px solid var(--line);padding:.5rem .6rem;text-align:left;vertical-align:top}
+  th{background:var(--acc);color:#fff;font-weight:600}
+  tbody tr:nth-child(even){background:var(--soft)}
+  code,.mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.92em}
+  .scroll{overflow-x:auto}
+  textarea{width:100%;min-height:7rem;padding:.7rem;border:1px solid var(--line);
+           border-radius:4px;background:var(--bg);color:var(--fg);
+           font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.9rem}
+  button{background:var(--acc);color:#fff;border:0;border-radius:4px;
+         padding:.6rem 1.2rem;font-size:.95rem;cursor:pointer;margin-top:.6rem}
+  button.sec{background:transparent;color:var(--acc);border:1px solid var(--acc);margin-left:.4rem}
+  .res{margin-top:1.25rem}
+  .box{border-radius:4px;padding:.8rem 1rem;margin:.7rem 0;border-left:3px solid}
+  .box.bad{border-color:var(--bad);background:var(--badbg)}
+  .box.warn{border-color:var(--warn);background:var(--warnbg)}
+  .box.ok{border-color:var(--ok);background:var(--okbg)}
+  .box h4{margin:0 0 .35rem;font-size:.95rem}
+  .box ul{margin:.4rem 0 0;padding-left:1.2rem}
+  .tag{display:inline-block;padding:.1rem .4rem;border:1px solid var(--line);
+       border-radius:3px;font-size:.8rem;margin:.15rem .25rem .15rem 0}
+  .badge{display:inline-block;padding:.05rem .4rem;border-radius:3px;font-size:.75rem;
+         text-transform:uppercase;letter-spacing:.04em}
+  .badge.a{background:var(--okbg);color:var(--ok)}
+  .badge.t{background:var(--badbg);color:var(--bad)}
+  footer{margin-top:3.5rem;padding-top:1rem;border-top:1px solid var(--line);
+         color:var(--mut);font-size:.85rem}
+  a{color:var(--acc)}
+  .priv{font-size:.85rem;color:var(--mut);margin-top:.5rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Sanctions Territory Reference</h1>
+  <p class="sub">Comprehensively sanctioned territories mapped to the ISO 3166 identifiers geolocation systems actually return · version <span class="mono">__VERSION__</span> · built __BUILT__</p>
+</header>
+
+<p class="lede">Institutions operating geolocation-based access controls must keep their blocked-territory configuration aligned with the comprehensive sanctions perimeter. That reconciliation is currently performed by hand, independently, at every institution, against prose legal sources of varying currency. This reference states the perimeter in the identifiers those systems use, cites a primary source for every record, and records every change.</p>
+
+<div class="finding">
+  <b>Under-blocking is the failure everyone knows.</b>
+  A territory is designated, a configuration lags, prohibited transactions get through, and an enforcement action eventually follows.
+</div>
+
+<div class="finding">
+  <b>Over-blocking is the failure nobody sees.</b>
+  When a programme is terminated, an institution that does not update its configuration continues to deny service to a jurisdiction the United States no longer comprehensively sanctions. No alert fires, because no control is designed to detect a transaction that was wrongly stopped. No metric records it, because nobody files a complaint saying they were improperly excluded. This checker reports both directions.
+</div>
+
+<h2>Coverage checker</h2>
+<p>Paste the territory codes your systems currently block. Alpha-2 country codes and ISO 3166-2 subdivision codes are both accepted, separated by commas, spaces or newlines.</p>
+
+<textarea id="in" spellcheck="false" placeholder="XX, YY-AAA, ZZ&#10;…"></textarea>
+<div>
+  <button id="run">Check coverage</button>
+  <button id="clear" class="sec">Clear</button>
+</div>
+<p class="priv">This computation runs entirely in your browser. Nothing you paste is transmitted anywhere, and this page loads no third-party scripts, fonts, or analytics. You can verify both claims with your browser's network tools open.</p>
+
+<div class="res" id="res" hidden></div>
+
+<h2>The reference</h2>
+<div class="scroll">
+<table>
+  <thead>
+    <tr><th>Territory</th><th>Status</th><th>ISO codes</th><th>Instrument</th><th>C.F.R.</th><th>Geolocation</th><th>Source</th></tr>
+  </thead>
+  <tbody id="rows"><!--__ROWS__--></tbody>
+</table>
+</div>
+
+<h2>Where legal scope and technical identifier diverge</h2>
+<div id="mismatches"><!--__MISMATCHES__--></div>
+
+<h2>Using the feed</h2>
+<p>The machine-readable feed is generated from the same source file as this page and published at a stable address:</p>
+<p><code>__FEED_URL__</code></p>
+<p>It is intended to be automated against. Records carry the same fields shown above, including the primary-source citation and the date each record was last verified against it.</p>
+
+<footer>
+  <p><strong>Currency.</strong> A reference whose entire value is its currency must police its own. A scheduled process checks the age of the most recent verification on every record and raises an issue when it exceeds threshold, so staleness is visible rather than silent. Each record below carries its own <span class="mono">last_verified</span> date in the feed.</p>
+  <p><strong>Limits.</strong> This reference covers comprehensive territorial programmes only. It is not a list of designated persons, it does not cover sectoral or list-based measures, and it is not legal advice. Verify against the cited primary source before relying on any record.</p>
+  <p>Built __BUILT__ from <span class="mono">data/territories.json</span> · change log in <span class="mono">CHANGELOG.md</span></p>
+</footer>
+
+</div>
+
+<script>
+const DATA = /*__DATA__*/ null;
+
+const norm = s => s.trim().toUpperCase();
+const parseCodes = raw =>
+  [...new Set(raw.split(/[\s,;|]+/).map(norm).filter(Boolean))];
+
+function sets(){
+  const active = new Map();      // code -> [territory]
+  const terminated = new Map();
+  for (const t of DATA.territories){
+    const m = t.status === 'active' ? active : terminated;
+    for (const c of t.iso_codes){
+      if (!m.has(c)) m.set(c, []);
+      m.get(c).push(t);
+    }
+  }
+  return {active, terminated};
+}
+
+function el(tag, cls, html){
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (html !== undefined) n.innerHTML = html;
+  return n;
+}
+const tags = cs => cs.map(c => `<span class="tag mono">${c}</span>`).join('');
+
+function check(){
+  const provided = new Set(parseCodes(document.getElementById('in').value));
+  const res = document.getElementById('res');
+  res.innerHTML = '';
+  res.hidden = false;
+
+  if (!provided.size){
+    res.appendChild(el('div','box warn','<h4>Nothing to check</h4><p>Paste the codes your systems currently block.</p>'));
+    return;
+  }
+
+  const {active, terminated} = sets();
+
+  // under-blocking: required codes absent
+  const missing = [...active.keys()].filter(c => !provided.has(c)).sort();
+
+  // over-blocking: codes retained for territories no longer designated
+  const obsolete = [...terminated.keys()].filter(c => !active.has(c) && provided.has(c)).sort();
+
+  // partial coverage: a territory with several identifiers, only some present
+  const partial = DATA.territories
+    .filter(t => t.status === 'active' && t.iso_codes.length > 1)
+    .map(t => ({t, have: t.iso_codes.filter(c => provided.has(c)),
+                   lack: t.iso_codes.filter(c => !provided.has(c))}))
+    .filter(x => x.have.length && x.lack.length);
+
+  // codes we do not recognise — informational only
+  const known = new Set([...active.keys(), ...terminated.keys()]);
+  const unknown = [...provided].filter(c => !known.has(c)).sort();
+
+  if (missing.length){
+    res.appendChild(el('div','box bad',
+      `<h4>Under-blocking — ${missing.length} code${missing.length>1?'s':''} missing</h4>
+       <p>These identify territories under an active comprehensive programme and are not in your configuration.</p>
+       <p>${tags(missing)}</p>
+       <ul>${missing.map(c => `<li><span class="mono">${c}</span> — ${active.get(c).map(t=>t.official_name).join(', ')}</li>`).join('')}</ul>`));
+  }
+
+  if (obsolete.length){
+    res.appendChild(el('div','box warn',
+      `<h4>Over-blocking — ${obsolete.length} code${obsolete.length>1?'s':''} retained after termination</h4>
+       <p>These belong to territories no longer under a comprehensive programme. Blocking them denies service to a jurisdiction the United States no longer comprehensively sanctions, and the harm generates no signal of its own.</p>
+       <p>${tags(obsolete)}</p>
+       <ul>${obsolete.map(c => {
+         const t = terminated.get(c)[0];
+         return `<li><span class="mono">${c}</span> — ${t.official_name}, terminated ${t.terminating_date} by ${t.terminating_instrument}</li>`;
+       }).join('')}</ul>`));
+  }
+
+  if (partial.length){
+    res.appendChild(el('div','box warn',
+      `<h4>Partial coverage — ${partial.length} territor${partial.length>1?'ies':'y'}</h4>
+       <p>Some but not all identifiers for these territories are present. This is a common and quiet failure: the configuration looks correct because the territory appears, while part of its perimeter is open.</p>
+       <ul>${partial.map(x =>
+         `<li><strong>${x.t.official_name}</strong> — present ${tags(x.have)} · missing ${tags(x.lack)}</li>`).join('')}</ul>`));
+  }
+
+  if (unknown.length){
+    res.appendChild(el('div','box',
+      `<h4>Not in this reference — ${unknown.length} code${unknown.length>1?'s':''}</h4>
+       <p>These are not comprehensive territorial programmes in this reference. That is not necessarily an error: your configuration may block them for reasons outside this scope.</p>
+       <p>${tags(unknown)}</p>`));
+  }
+
+  if (!missing.length && !obsolete.length && !partial.length){
+    res.appendChild(el('div','box ok',
+      `<h4>Aligned</h4><p>Every identifier for every territory under an active comprehensive programme is present, and no identifier for a terminated programme is retained. Checked against reference version <span class="mono">${DATA.version}</span>.</p>`));
+  }
+}
+
+document.getElementById('run').addEventListener('click', check);
+document.getElementById('clear').addEventListener('click', () => {
+  document.getElementById('in').value = '';
+  document.getElementById('res').hidden = true;
+});
+</script>
+</body>
+</html>

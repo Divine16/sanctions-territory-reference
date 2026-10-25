@@ -1,0 +1,73 @@
+{
+  "$comment": [
+    "SINGLE SOURCE OF TRUTH. The public site and the machine-readable feed are",
+    "generated from this file at build time. Nothing else is edited by hand.",
+    "",
+    "EVERY RECORD BELOW IS A STRUCTURAL PLACEHOLDER AND IS MARKED verified:false.",
+    "scripts/validate.py FAILS while any record is unverified, so the site cannot",
+    "be built until each record has been checked against a primary source by a",
+    "human. Replace the placeholder values, confirm every citation against the",
+    "Executive Order / Federal Register notice / C.F.R. part itself, then set",
+    "verified to true and record who verified it and when.",
+    "",
+    "Do not take the instrument numbers below on trust. They are carried over",
+    "from draft notes to show the shape of a record, not to assert the law."
+  ],
+
+  "schema_version": "1.0.0",
+  "generated_note": "Edit this file only. Run `make build` to regenerate the site and feed.",
+
+  "territories": [
+    {
+      "id": "PLACEHOLDER-comprehensive-program-active",
+      "official_name": "REPLACE — official territory name as used in the designating instrument",
+      "status": "active",
+      "designating_instrument": "REPLACE — e.g. Executive Order NNNNN",
+      "designating_date": "0000-00-00",
+      "terminating_instrument": null,
+      "terminating_date": null,
+      "cfr_part": "REPLACE — e.g. 31 C.F.R. Part NNN",
+      "iso_codes": ["XX"],
+      "geolocation_confidence": "high",
+      "mismatch_note": null,
+      "primary_source": "REPLACE — direct URL to the Executive Order, Federal Register notice, or C.F.R. part",
+      "last_verified": "0000-00-00",
+      "verified": false,
+      "verified_by": null
+    },
+    {
+      "id": "PLACEHOLDER-subnational-region-scope-mismatch",
+      "official_name": "REPLACE — a sub-national region where legal scope and ISO subdivision do not align",
+      "status": "active",
+      "designating_instrument": "REPLACE",
+      "designating_date": "0000-00-00",
+      "terminating_instrument": null,
+      "terminating_date": null,
+      "cfr_part": "REPLACE",
+      "iso_codes": ["XX-AAA", "XX-BBB"],
+      "geolocation_confidence": "low",
+      "mismatch_note": "REPLACE — state precisely how the legal perimeter and the available technical identifier diverge, and that no configuration is correct, only a documented choice.",
+      "primary_source": "REPLACE",
+      "last_verified": "0000-00-00",
+      "verified": false,
+      "verified_by": null
+    },
+    {
+      "id": "PLACEHOLDER-terminated-program",
+      "official_name": "REPLACE — a territory whose comprehensive program has been terminated",
+      "status": "terminated",
+      "designating_instrument": "REPLACE",
+      "designating_date": "0000-00-00",
+      "terminating_instrument": "REPLACE — the instrument that lifted the program",
+      "terminating_date": "0000-00-00",
+      "cfr_part": "REPLACE",
+      "iso_codes": ["XX"],
+      "geolocation_confidence": "high",
+      "mismatch_note": null,
+      "primary_source": "REPLACE",
+      "last_verified": "0000-00-00",
+      "verified": false,
+      "verified_by": null
+    }
+  ]
+}
