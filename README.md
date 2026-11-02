@@ -4,8 +4,10 @@ A public, versioned mapping of comprehensively sanctioned territories to the
 ISO 3166 identifiers that geolocation systems actually return, with a coverage
 checker that runs entirely in the browser.
 
-**Site:** _(set once GitHub Pages is enabled)_
-**Feed:** `docs/feed.json`, published at a stable address
+**Site:** https://divine16.github.io/sanctions-territory-reference/
+**Feed:** https://divine16.github.io/sanctions-territory-reference/feed.json (`docs/feed.json` in repo)
+
+Evidence capture for exhibits G.5–G.7: see [`exhibits/README.md`](exhibits/README.md).
 
 ---
 
@@ -84,7 +86,7 @@ drift from the source file.
 1. Read the primary instrument itself — the Executive Order, the Federal
    Register notice, or the C.F.R. part. Not a summary, not a law firm alert.
 2. Edit `data/territories.json`.
-3. Set `last_verified` to today and `verified_by` to your name.
+3. Set `last_verified` to today and `verified_by` to your name (e.g. Divine Linus).
 4. Add an entry to `CHANGELOG.md` naming the instrument that caused the change.
 5. Run `make build` and commit the regenerated `docs/`.
 

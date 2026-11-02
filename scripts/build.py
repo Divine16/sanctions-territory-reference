@@ -27,7 +27,7 @@ TEMPLATE = ROOT / "site" / "template.html"
 OUT = ROOT / "docs"
 
 # Set this to the published address once GitHub Pages is live.
-FEED_URL = "https://REPLACE-ME.github.io/sanctions-territory-reference/feed.json"
+FEED_URL = "https://divine16.github.io/sanctions-territory-reference/feed.json"
 
 
 def run_validation():
@@ -139,9 +139,5 @@ def main():
 
     print(f"Built docs/index.html and docs/feed.json — {len(territories)} record(s), "
           f"{feed['active_count']} active.")
-    if "REPLACE-ME" in FEED_URL:
-        print("NOTE: set FEED_URL in scripts/build.py to the published Pages address.")
-
-
 if __name__ == "__main__":
     main()
