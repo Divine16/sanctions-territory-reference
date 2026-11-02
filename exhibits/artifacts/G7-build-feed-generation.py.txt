@@ -1,0 +1,19 @@
+# ---- the feed: the same records, nothing added, nothing hidden
+    feed = {
+        "name": "Sanctions Territory Reference",
+        "version": version,
+        "generated": built,
+        "source_file": "data/territories.json",
+        "record_count": len(territories),
+        "active_count": sum(1 for t in territories if t["status"] == "active"),
+        "notice": ("Comprehensive territorial sanctions programmes only. Not a list of designated "
+                   "persons; does not cover sectoral or list-based measures; not legal advice. "
+                   "Verify against the cited primary source before relying on any record."),
+        "territories": territories,
+    }
+
+    OUT.mkdir(parents=True, exist_ok=True)
+    (OUT / "feed.json").write_text(
+        json.dumps(feed, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+
+    

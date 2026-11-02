@@ -1,0 +1,9 @@
+{
+  "retrieved_at_utc": "2026-11-02T19:35:32.665055+00:00",
+  "feed_url": "https://divine16.github.io/sanctions-territory-reference/feed.json",
+  "retrieval_method": "local_build_copy",
+  "note": "Replace with live curl capture once GitHub Pages returns 200.",
+  "live_url_error": "HTTP Error 404: Not Found",
+  "http_status": null,
+  "source_path": "docs/feed.json"
+}

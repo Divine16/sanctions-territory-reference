@@ -7,7 +7,7 @@ checker that runs entirely in the browser.
 **Site:** https://divine16.github.io/sanctions-territory-reference/
 **Feed:** https://divine16.github.io/sanctions-territory-reference/feed.json (`docs/feed.json` in repo)
 
-Evidence capture for exhibits G.5–G.7: see [`exhibits/README.md`](exhibits/README.md).
+Evidence capture for exhibits G.5–G.7: [`exhibits/EXHIBIT-PACKAGE-G5-G7.md`](exhibits/EXHIBIT-PACKAGE-G5-G7.md) (run `make exhibits` to refresh artifacts).
 
 ---
 
