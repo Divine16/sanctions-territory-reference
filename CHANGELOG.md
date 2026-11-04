@@ -8,6 +8,12 @@ Format: `YYYY-MM-DD — territory — change — causing instrument — who`
 
 ---
 
+## 2026-11-04
+
+- 2026-11-04 — Sudan — corrected designating date to 1997-11-03 (E.O. 13067); terminating instrument to E.O. 13761 as amended by E.O. 13804; terminating date to 2017-10-12; primary source to 2018-06-29 Federal Register removal rule; added Darfur Part 546 note — Federal Register 2018-14084 — Divine Linus
+- 2026-11-04 — Syria — status changed from active to terminated; terminating instrument E.O. 14312 effective 2025-07-01; primary source to Federal Register revocation notice; note on surviving PAARSS/list-based measures — Federal Register 2025-12506 — Divine Linus
+- 2026-11-04 — Cuba, Iran, North Korea, Crimea, Donetsk/Luhansk — reverified against cited primary sources; last_verified updated — routine verification — Divine Linus
+
 ## 2026-10-26
 
 - 2026-10-26 — Cuba — initial active comprehensive record — Cuban Assets Control Regulations (31 C.F.R. Part 515) — Divine Linus
