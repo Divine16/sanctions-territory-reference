@@ -6,7 +6,7 @@ checker that runs entirely in the browser.
 
 **Site:** https://divine16.github.io/sanctions-territory-reference/
 
-**GitHub Pages:** Settings → Pages → **Source: GitHub Actions** (workflow `Publish site to GitHub Pages`). If deploy times out, re-run the workflow; avoid running branch-based Pages and Actions deploy at the same time.
+**GitHub Pages:** Settings → Pages → **Deploy from a branch** → `main` → **`/docs`**. Do not use GitHub Actions as the Pages source unless you add a deploy workflow again. If deploy fails with *in progress deployment*, run `./scripts/unblock_pages_deploy.sh`, wait ~10 minutes, push a **new** commit.
 **Feed:** https://divine16.github.io/sanctions-territory-reference/feed.json (`docs/feed.json` in repo)
 
 Evidence package (G.5–G.7): run `make exhibit-package` → [`exhibits/EXHIBIT-PACKAGE-G5-G7.pdf`](exhibits/EXHIBIT-PACKAGE-G5-G7.pdf)
