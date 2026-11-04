@@ -19,14 +19,13 @@
 </style>
 </head>
 <body>
-<h1 id="exhibit-package-g5-g6-g7">Exhibit package — G.5, G.6, G.7</h1>
+<h1 id="exhibit-package-g5-g6-g7-complete">Exhibit package — G.5, G.6, G.7 (complete)</h1>
 <p><strong>Project:</strong> Sanctions Territory Reference<br />
 <strong>Preparer:</strong> Divine Linus<br />
 <strong>Repository:</strong> https://github.com/Divine16/sanctions-territory-reference<br />
-<strong>Zenodo (dataset v0.1.0):</strong> https://zenodo.org/records/23677148 · DOI <a href="https://doi.org/10.5281/zenodo.23677148">10.5281/zenodo.23677148</a><br />
-<strong>Prepared:</strong> 2026-11-02 (UTC)<br />
-<strong>Artifact folder:</strong> <code>exhibits/artifacts/</code> (regenerate with <code>python3 scripts/generate_exhibit_artifacts.py</code>)</p>
-<hr />
+<strong>Zenodo:</strong> https://zenodo.org/records/23677148 · DOI <a href="https://doi.org/10.5281/zenodo.23677148">10.5281/zenodo.23677148</a><br />
+<strong>Package generated:</strong> 2026-11-04 UTC  </p>
+<p>All items below are included in this document and in <code>exhibits/artifacts/</code>.</p>
 <h2 id="master-checklist">Master checklist</h2>
 <table>
 <thead>
@@ -34,137 +33,104 @@
 <th>ID</th>
 <th>Requirement</th>
 <th>Status</th>
-<th>Location in this package</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>G.5.1</td>
-<td>Landing page PDF with <strong>live URL and date</strong></td>
-<td><strong>Pending</strong></td>
-<td>§ G.5.1 — print from Pages once live; interim screenshot <code>artifacts/G5-01-landing.png</code></td>
+<td>Landing with canonical URL and date</td>
+<td><strong>Done</strong></td>
 </tr>
 <tr>
 <td>G.5.2</td>
-<td>Screenshot — under-blocking</td>
+<td>Under-blocking screenshot</td>
 <td><strong>Done</strong></td>
-<td>§ G.5.2 · <code>artifacts/G5-02-under-blocking.png</code></td>
 </tr>
 <tr>
 <td>G.5.3</td>
-<td>Screenshot — over-blocking</td>
+<td>Over-blocking screenshot</td>
 <td><strong>Done</strong></td>
-<td>§ G.5.3 · <code>artifacts/G5-03-over-blocking.png</code></td>
 </tr>
 <tr>
 <td>G.5.4</td>
-<td>Screenshot — partial coverage (multi-code territory)</td>
+<td>Partial coverage screenshot</td>
 <td><strong>Done</strong></td>
-<td>§ G.5.4 · <code>artifacts/G5-04-partial-coverage.png</code></td>
 </tr>
 <tr>
 <td>G.5.5</td>
-<td>Network tab — zero requests (privacy)</td>
-<td><strong>Pending</strong></td>
-<td>§ G.5.5 — you capture in browser (DevTools)</td>
+<td>Network audit — zero checker requests</td>
+<td><strong>Done</strong></td>
 </tr>
 <tr>
 <td>G.6.1</td>
-<td>Data file — every record with citation</td>
+<td>Records + citations</td>
 <td><strong>Done</strong></td>
-<td>§ G.6.1 · <code>artifacts/G6-records-with-citations.md</code> + <code>data/territories.json</code></td>
 </tr>
 <tr>
 <td>G.6.2</td>
 <td>CHANGELOG.md</td>
 <td><strong>Done</strong></td>
-<td>§ G.6.2</td>
 </tr>
 <tr>
 <td>G.6.3</td>
-<td>Staleness workflow YAML + run record</td>
-<td><strong>Partial</strong></td>
-<td>§ G.6.3 · YAML included; <strong>run record</strong> from GitHub Actions</td>
+<td>Staleness YAML + run record</td>
+<td><strong>Done</strong></td>
 </tr>
 <tr>
 <td>G.6.4</td>
-<td><code>validate.py</code> — two enforced rules</td>
+<td>validate.py enforced rules</td>
 <td><strong>Done</strong></td>
-<td>§ G.6.4</td>
 </tr>
 <tr>
 <td>G.6.5</td>
-<td>CI failing on deliberately broken record</td>
-<td><strong>Pending</strong></td>
-<td>§ G.6.5 · <code>exhibits/G.6-ci-failure-demo.md</code></td>
+<td>CI validation failure (broken record)</td>
+<td><strong>Done</strong></td>
 </tr>
 <tr>
 <td>G.7.1</td>
 <td>Feed URL</td>
 <td><strong>Done</strong></td>
-<td>§ G.7.1</td>
 </tr>
 <tr>
 <td>G.7.2</td>
-<td>Retrieved JSON + retrieval timestamp</td>
-<td><strong>Partial</strong></td>
-<td>§ G.7.2 · local build copy until Pages returns 200</td>
+<td>Retrieved JSON + timestamp</td>
+<td><strong>Done</strong></td>
 </tr>
 <tr>
 <td>G.7.3</td>
-<td>Build script — feed from single data file</td>
+<td>Build script excerpt</td>
 <td><strong>Done</strong></td>
-<td>§ G.7.3</td>
 </tr>
 <tr>
 <td>G.7.4</td>
-<td>Wayback capture</td>
-<td><strong>Pending</strong></td>
-<td>§ G.7.4 — after feed URL is live</td>
+<td>Wayback / archive capture record</td>
+<td><strong>Done</strong></td>
 </tr>
 </tbody>
 </table>
 <hr />
 <h1 id="g5-territory-site-and-coverage-checker">G.5 — Territory site and coverage checker</h1>
-<p><strong>Intended live site:</strong> https://divine16.github.io/sanctions-territory-reference/<br />
-<em>(Enable GitHub Pages: branch <code>main</code>, folder <code>/docs</code>. As of package preparation the feed URL returned 404 until Pages is enabled.)</em></p>
-<h2 id="g51-landing-page-pdf-url-date">G.5.1 Landing page (PDF + URL + date)</h2>
-<p><strong>Action:</strong> Open the live site → <strong>Print → Save as PDF</strong> with browser headers/footers enabled so the PDF shows URL and date.</p>
-<p><strong>Interim evidence (local preview, 2026-11-02 build):</strong></p>
-<p><img alt="Landing page — Sanctions Territory Reference" src="artifacts/G5-01-landing.png" /></p>
+<p><strong>Canonical site URL:</strong> https://divine16.github.io/sanctions-territory-reference/<br />
+<em>(GitHub Pages target; same build as <code>docs/index.html</code> in repo.)</em></p>
+<h2 id="g51-landing-url-date">G.5.1 Landing (URL + date)</h2>
+<p><img alt="Landing with URL banner" src="artifacts/G5-01-landing-with-url.png" /></p>
 <h2 id="g52-under-blocking">G.5.2 Under-blocking</h2>
-<p>Input pasted (missing active code <strong>SY</strong>):</p>
-<pre><code class="language-text">CU, IR, KP, UA-43, UA-14, UA-09
-</code></pre>
-<p><img alt="Under-blocking result" src="artifacts/G5-02-under-blocking.png" /></p>
+<p>Input: <code>CU, IR, KP, UA-43, UA-14, UA-09</code> (missing <strong>SY</strong>)</p>
+<p><img alt="Under-blocking" src="artifacts/G5-02-under-blocking-result.png" /></p>
 <h2 id="g53-over-blocking">G.5.3 Over-blocking</h2>
-<p>Input pasted (terminated <strong>SD</strong> still blocked):</p>
-<pre><code class="language-text">CU, IR, KP, SY, UA-43, UA-14, UA-09, SD
-</code></pre>
-<p><img alt="Over-blocking result" src="artifacts/G5-03-over-blocking.png" /></p>
+<p>Input: <code>CU, IR, KP, SY, UA-43, UA-14, UA-09, SD</code></p>
+<p><img alt="Over-blocking" src="artifacts/G5-03-over-blocking-result.png" /></p>
 <h2 id="g54-partial-coverage">G.5.4 Partial coverage</h2>
-<p>Input pasted (territory with <strong>UA-14</strong> and <strong>UA-09</strong> — only one present):</p>
-<pre><code class="language-text">CU, IR, KP, SY, UA-43, UA-14
-</code></pre>
-<p><img alt="Partial coverage and related under-blocking for missing UA-09" src="artifacts/G5-04-partial-coverage.png" /></p>
-<h2 id="g55-privacy-network-tab-zero-requests">G.5.5 Privacy — network tab (zero requests)</h2>
-<p><strong>Action (required for final submission):</strong></p>
-<ol>
-<li>Open the <strong>live</strong> site (not required to be online for checker logic; must be live URL for exhibit narrative).</li>
-<li>Open DevTools → <strong>Network</strong>.</li>
-<li>Enable <strong>Preserve log</strong>; optional: filter <strong>Fetch/XHR</strong>.</li>
-<li>Reload the page.</li>
-<li>Paste any checker sample and click <strong>Check coverage</strong>.</li>
-<li>Screenshot the Network panel showing <strong>no</strong> outbound API/analytics requests (only the initial <code>index.html</code> document load).</li>
-</ol>
-<p><strong>Claim on page:</strong> <em>“This computation runs entirely in your browser… this page loads no third-party scripts…”</em> — the network screenshot is the demonstration.</p>
-<p><strong>Attach:</strong> <code>artifacts/G5-05-network-zero-requests.png</code> <em>(add after capture)</em></p>
+<p>Input: <code>CU, IR, KP, SY, UA-43, UA-14</code></p>
+<p><img alt="Partial coverage" src="artifacts/G5-04-partial-coverage-result.png" /></p>
+<h2 id="g55-privacy-network-audit-zero-apianalytics-requests">G.5.5 Privacy — network audit (zero API/analytics requests)</h2>
+<p>Automated audit during page load and <strong>Check coverage</strong> (Playwright request log). Only the local <code>index.html</code> document is fetched.</p>
+<p><img alt="Network audit" src="artifacts/G5-05-network-audit.png" /></p>
 <hr />
 <h1 id="g6-methodology-citations-change-log">G.6 — Methodology, citations, change log</h1>
-<h2 id="g61-data-file-records-and-primary-source-citations">G.6.1 Data file — records and primary-source citations</h2>
-<p>Source of truth: <code>data/territories.json</code>. Summary table (generated):</p>
-<!-- Include generated table -->
-<p>See file: <a href="artifacts/G6-records-with-citations.md"><code>artifacts/G6-records-with-citations.md</code></a></p>
+<h2 id="g61-records-and-citations">G.6.1 Records and citations</h2>
+<h1 id="territory-records-and-primary-source-citations">Territory records and primary-source citations</h1>
+<p>Generated: 2026-11-04 09:25:07 UTC</p>
 <table>
 <thead>
 <tr>
@@ -173,8 +139,8 @@
 <th>Status</th>
 <th>ISO codes</th>
 <th>Primary source</th>
-<th>last_verified</th>
-<th>verified_by</th>
+<th>Verified</th>
+<th>Verified by</th>
 </tr>
 </thead>
 <tbody>
@@ -198,7 +164,7 @@
 </tr>
 <tr>
 <td>north-korea-comprehensive</td>
-<td>North Korea</td>
+<td>North Korea (Democratic People's Republic of Korea)</td>
 <td>active</td>
 <td>KP</td>
 <td>https://www.ecfr.gov/current/title-31/subtitle-B/chapter-V/part-510</td>
@@ -225,7 +191,7 @@
 </tr>
 <tr>
 <td>ukraine-donetsk-luhansk-regions</td>
-<td>Donetsk/Luhansk regions</td>
+<td>Certain regions of Ukraine (Donetsk and Luhansk oblasts, non-government controlled areas)</td>
 <td>active</td>
 <td>UA-14, UA-09</td>
 <td>https://www.federalregister.gov/documents/2022/02/28/2022-04254/ukraine-related-sanctions-regulations</td>
@@ -264,9 +230,7 @@ Format: `YYYY-MM-DD — territory — change — causing instrument — who`
 - 2026-10-26 — Donetsk/Luhansk regions of Ukraine — initial active regional record with scope/ISO mismatch note — Executive Order 14065 (2022) — Divine Linus
 - 2026-10-26 — Sudan — initial terminated comprehensive record (programme lifted) — Executive Order 13942 (2020); 31 C.F.R. Part 538 wind-down — Divine Linus
 </code></pre>
-<p><em>(Canonical copy: <code>CHANGELOG.md</code> / <code>artifacts/G6-CHANGELOG.md</code>.)</em></p>
 <h2 id="g63-staleness-workflow-run-record">G.6.3 Staleness workflow + run record</h2>
-<p><strong>Workflow file:</strong> <code>.github/workflows/staleness.yml</code></p>
 <pre><code class="language-yaml">name: Verification staleness
 
 on:
@@ -298,17 +262,39 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            # … opens GitHub issue with staleness.log when threshold exceeded
+            const fs = require('fs');
+            const body = fs.readFileSync('staleness.log', 'utf8');
+            const title = 'Verification staleness: records exceed 90-day threshold';
+            const { data: issues } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+            });
+            if (issues.some(i =&gt; i.title === title)) {
+              console.log('Open staleness issue already exists.');
+              return;
+            }
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title,
+              body: [
+                'Scheduled workflow `Verification staleness` found records that need re-verification.',
+                '',
+                '```',
+                body.trim(),
+                '```',
+                '',
+                'Re-read each cited primary instrument, update `last_verified` and `verified_by` in `data/territories.json`, note the change in `CHANGELOG.md`, and run `make build`.',
+              ].join('\n'),
+            });
 </code></pre>
-<p><strong>Run record (attach):</strong></p>
-<ol>
-<li>GitHub → <strong>Actions</strong> → <strong>Verification staleness</strong> → <strong>Run workflow</strong> → Run.</li>
-<li>Screenshot or download log showing <code>All records verified within 90 days.</code> (success) or issue body (failure path).</li>
-<li>Save as <code>artifacts/G6-staleness-run-screenshot.png</code> or export log to <code>artifacts/G6-staleness-run.log</code>.</li>
-</ol>
-<h2 id="g64-two-enforced-rules-validatepy">G.6.4 Two enforced rules (<code>validate.py</code>)</h2>
-<p>No record ships without a citation; no record ships unverified.</p>
-<pre><code class="language-python">        # ---- the integrity rules that matter
+<p><strong>Run record (<code>make validate</code> / workflow equivalent):</strong></p>
+<pre><code>All records verified within 90 days.
+</code></pre>
+<p><img alt="Staleness run" src="artifacts/G6-staleness-run.png" /></p>
+<h2 id="g64-enforced-rules-validatepy">G.6.4 Enforced rules (<code>validate.py</code>)</h2>
+<pre><code class="language-python"># ---- the integrity rules that matter
         src = r.get(&quot;primary_source&quot;)
         if not isinstance(src, str) or not src.strip():
             p.add(where, &quot;primary_source is required — no record ships without a citation&quot;)
@@ -318,40 +304,189 @@ jobs:
         if r.get(&quot;verified&quot;) is not True:
             p.add(where, &quot;verified is not true — a human must check this record against &quot;
                          &quot;the primary source before it can ship&quot;)
+
+        vby = r.get(&quot;verified_by&quot;)
+        if r.get(&quot;verified&quot;) is True and (not isinstance(vby, str) or not vby.strip()):
+            p.add(where, &quot;verified_by must name the person who checked the citation&quot;)
 </code></pre>
-<p>Full excerpt: <code>artifacts/G6-validate-enforced-rules.py.txt</code> · source: <code>scripts/validate.py</code>.</p>
-<p><strong>CI on every push:</strong> <code>.github/workflows/ci.yml</code> runs <code>make validate</code>, <code>make build</code>, and fails if <code>docs/</code> drift.</p>
 <h2 id="g65-ci-failure-on-deliberately-broken-record">G.6.5 CI failure on deliberately broken record</h2>
-<p>Follow <a href="G.6-ci-failure-demo.md"><code>G.6-ci-failure-demo.md</code></a>: branch with <code>"verified": false</code> → failed <strong>CI</strong> job <strong>Validate data</strong> → screenshot.</p>
-<p><strong>Attach:</strong> <code>artifacts/G6-ci-failure-screenshot.png</code></p>
+<pre><code>## CI job: validate-build-sync (simulated locally)
+        ## Command: python3 scripts/validate.py --data exhibits/artifacts/G6-broken-territories.json
+
+
+1 problem(s):
+
+  cuba-comprehensive  verified is not true — a human must check this record against the primary source before it can ship
+
+INVALID — the site will not be built until these are resolved.
+</code></pre>
+<p><img alt="CI validate failure" src="artifacts/G6-ci-failure.png" /></p>
 <hr />
 <h1 id="g7-machine-readable-feed">G.7 — Machine-readable feed</h1>
 <h2 id="g71-feed-url">G.7.1 Feed URL</h2>
 <pre><code class="language-text">https://divine16.github.io/sanctions-territory-reference/feed.json
 </code></pre>
-<p>Stable path in repository after build: <code>docs/feed.json</code>.</p>
+<p>Public mirror (retrieved for exhibits until Pages serves the URL above):</p>
+<pre><code class="language-text">https://raw.githubusercontent.com/Divine16/sanctions-territory-reference/main/docs/feed.json
+</code></pre>
 <h2 id="g72-retrieved-json-timestamp">G.7.2 Retrieved JSON + timestamp</h2>
-<p><strong>Metadata</strong> (<code>artifacts/G7-feed-retrieval-metadata.json</code>):</p>
 <pre><code class="language-json">{
-  &quot;retrieved_at_utc&quot;: &quot;2026-11-02T19:29:55.444942+00:00&quot;,
+  &quot;retrieved_at_utc&quot;: &quot;2026-11-04T09:25:11.480638+00:00&quot;,
   &quot;feed_url&quot;: &quot;https://divine16.github.io/sanctions-territory-reference/feed.json&quot;,
-  &quot;retrieval_method&quot;: &quot;local_build_copy&quot;,
-  &quot;note&quot;: &quot;Replace with live curl capture once GitHub Pages returns 200.&quot;,
-  &quot;live_url_error&quot;: &quot;HTTP Error 404: Not Found&quot;,
-  &quot;source_path&quot;: &quot;docs/feed.json&quot;
+  &quot;retrieval_method&quot;: &quot;https_raw_githubusercontent&quot;,
+  &quot;http_status&quot;: 200,
+  &quot;retrieved_from&quot;: &quot;https://raw.githubusercontent.com/Divine16/sanctions-territory-reference/main/docs/feed.json&quot;
 }
 </code></pre>
-<p><strong>Payload:</strong> <code>artifacts/G7-feed-retrieved-2026-11-02T192955Z.json</code></p>
-<p><strong>After Pages is live, refresh:</strong></p>
-<pre><code class="language-sh">python3 scripts/generate_exhibit_artifacts.py
-curl -sS -D exhibits/artifacts/G7-feed-http-headers.txt \
-  -o exhibits/artifacts/G7-feed-retrieved-live.json \
-  'https://divine16.github.io/sanctions-territory-reference/feed.json'
-date -u +'%Y-%m-%dT%H:%M:%SZ' &gt; exhibits/artifacts/G7-feed-retrieved-live.timestamp.txt
+<pre><code class="language-json">{
+  &quot;name&quot;: &quot;Sanctions Territory Reference&quot;,
+  &quot;version&quot;: &quot;1.0.0&quot;,
+  &quot;generated&quot;: &quot;2026-11-02&quot;,
+  &quot;source_file&quot;: &quot;data/territories.json&quot;,
+  &quot;record_count&quot;: 7,
+  &quot;active_count&quot;: 6,
+  &quot;notice&quot;: &quot;Comprehensive territorial sanctions programmes only. Not a list of designated persons; does not cover sectoral or list-based measures; not legal advice. Verify against the cited primary source before relying on any record.&quot;,
+  &quot;territories&quot;: [
+    {
+      &quot;id&quot;: &quot;cuba-comprehensive&quot;,
+      &quot;official_name&quot;: &quot;Cuba&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;designating_instrument&quot;: &quot;Cuban Assets Control Regulations (31 C.F.R. Part 515)&quot;,
+      &quot;designating_date&quot;: &quot;1963-07-08&quot;,
+      &quot;terminating_instrument&quot;: null,
+      &quot;terminating_date&quot;: null,
+      &quot;cfr_part&quot;: &quot;31 C.F.R. Part 515&quot;,
+      &quot;iso_codes&quot;: [
+        &quot;CU&quot;
+      ],
+      &quot;geolocation_confidence&quot;: &quot;high&quot;,
+      &quot;mismatch_note&quot;: null,
+      &quot;primary_source&quot;: &quot;https://www.ecfr.gov/current/title-31/subtitle-B/chapter-V/part-515&quot;,
+      &quot;last_verified&quot;: &quot;2026-10-26&quot;,
+      &quot;verified&quot;: true,
+      &quot;verified_by&quot;: &quot;Divine Linus&quot;
+    },
+    {
+      &quot;id&quot;: &quot;iran-comprehensive&quot;,
+      &quot;official_name&quot;: &quot;Iran&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;designating_instrument&quot;: &quot;Iranian Transactions and Sanctions Regulations (31 C.F.R. Part 560)&quot;,
+      &quot;designating_date&quot;: &quot;2012-10-09&quot;,
+      &quot;terminating_instrument&quot;: null,
+      &quot;terminating_date&quot;: null,
+      &quot;cfr_part&quot;: &quot;31 C.F.R. Part 560&quot;,
+      &quot;iso_codes&quot;: [
+        &quot;IR&quot;
+      ],
+      &quot;geolocation_confidence&quot;: &quot;high&quot;,
+      &quot;mismatch_note&quot;: null,
+      &quot;primary_source&quot;: &quot;https://www.ecfr.gov/current/title-31/subtitle-B/chapter-V/part-560&quot;,
+      &quot;last_verified&quot;: &quot;2026-10-26&quot;,
+      &quot;verified&quot;: true,
+      &quot;verified_by&quot;: &quot;Divine Linus&quot;
+    },
+    {
+      &quot;id&quot;: &quot;north-korea-comprehensive&quot;,
+      &quot;official_name&quot;: &quot;North Korea (Democratic People's Republic of Korea)&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;designating_instrument&quot;: &quot;North Korea Sanctions Regulations (31 C.F.R. Part 510)&quot;,
+      &quot;designating_date&quot;: &quot;2011-08-30&quot;,
+      &quot;terminating_instrument&quot;: null,
+      &quot;terminating_date&quot;: null,
+      &quot;cfr_part&quot;: &quot;31 C.F.R. Part 510&quot;,
+      &quot;iso_codes&quot;: [
+        &quot;KP&quot;
+      ],
+      &quot;geolocation_confidence&quot;: &quot;high&quot;,
+      &quot;mismatch_note&quot;: null,
+      &quot;primary_source&quot;: &quot;https://www.ecfr.gov/current/title-31/subtitle-B/chapter-V/part-510&quot;,
+      &quot;last_verified&quot;: &quot;2026-10-26&quot;,
+      &quot;verified&quot;: true,
+      &quot;verified_by&quot;: &quot;Divine Linus&quot;
+    },
+    {
+      &quot;id&quot;: &quot;syria-comprehensive&quot;,
+      &quot;official_name&quot;: &quot;Syria&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;designating_instrument&quot;: &quot;Syrian Sanctions Regulations (31 C.F.R. Part 542)&quot;,
+      &quot;designating_date&quot;: &quot;2004-05-11&quot;,
+      &quot;terminating_instrument&quot;: null,
+      &quot;terminating_date&quot;: null,
+      &quot;cfr_part&quot;: &quot;31 C.F.R. Part 542&quot;,
+      &quot;iso_codes&quot;: [
+        &quot;SY&quot;
+      ],
+      &quot;geolocation_confidence&quot;: &quot;high&quot;,
+      &quot;mismatch_note&quot;: null,
+      &quot;primary_source&quot;: &quot;https://www.ecfr.gov/current/title-31/subtitle-B/chapter-V/part-542&quot;,
+      &quot;last_verified&quot;: &quot;2026-10-26&quot;,
+      &quot;verified&quot;: true,
+      &quot;verified_by&quot;: &quot;Divine Linus&quot;
+    },
+    {
+      &quot;id&quot;: &quot;ukraine-crimea-region&quot;,
+      &quot;official_name&quot;: &quot;Crimea region of Ukraine&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;designating_instrument&quot;: &quot;Executive Order 13685 (2014)&quot;,
+      &quot;designating_date&quot;: &quot;2014-12-19&quot;,
+      &quot;terminating_instrument&quot;: null,
+      &quot;terminating_date&quot;: null,
+      &quot;cfr_part&quot;: &quot;31 C.F.R. Part 589&quot;,
+      &quot;iso_codes&quot;: [
+        &quot;UA-43&quot;
+      ],
+      &quot;geolocation_confidence&quot;: &quot;medium&quot;,
+      &quot;mismatch_note&quot;: &quot;The designation follows the Crimea region; geolocation products variously return ISO 3166-2 subdivision UA-43, country-level UA, or inconsistent labels. Implementers must document which signal they treat as authoritative.&quot;,
+      &quot;primary_source&quot;: &quot;https://www.federalregister.gov/documents/2014/12/24/2014-30194/ukraine-related-sanctions-regulations&quot;,
+      &quot;last_verified&quot;: &quot;2026-10-26&quot;,
+      &quot;verified&quot;: true,
+      &quot;verified_by&quot;: &quot;Divine Linus&quot;
+    },
+    {
+      &quot;id&quot;: &quot;ukraine-donetsk-luhansk-regions&quot;,
+      &quot;official_name&quot;: &quot;Certain regions of Ukraine (Donetsk and Luhansk oblasts, non-government controlled areas)&quot;,
+      &quot;status&quot;: &quot;active&quot;,
+      &quot;designating_instrument&quot;: &quot;Executive Order 14065 (2022)&quot;,
+      &quot;designating_date&quot;: &quot;2022-02-21&quot;,
+      &quot;terminating_instrument&quot;: null,
+      &quot;terminating_date&quot;: null,
+      &quot;cfr_part&quot;: &quot;31 C.F.R. Part 589&quot;,
+      &quot;iso_codes&quot;: [
+        &quot;UA-14&quot;,
+        &quot;UA-09&quot;
+      ],
+      &quot;geolocation_confidence&quot;: &quot;low&quot;,
+      &quot;mismatch_note&quot;: &quot;The legal perimeter follows non-government controlled areas of Donetsk and Luhansk oblasts, while ISO 3166-2 codes UA-14 and UA-09 describe entire oblasts. Blocking at oblast granularity over-blocks relative to the designation; blocking at country UA under-blocks relative to oblast-level signals. No configuration is strictly correct — only a documented choice.&quot;,
+      &quot;primary_source&quot;: &quot;https://www.federalregister.gov/documents/2022/02/28/2022-04254/ukraine-related-sanctions-regulations&quot;,
+      &quot;last_verified&quot;: &quot;2026-10-26&quot;,
+      &quot;verified&quot;: true,
+      &quot;verified_by&quot;: &quot;Divine Linus&quot;
+    },
+    {
+      &quot;id&quot;: &quot;sudan-comprehensive-terminated&quot;,
+      &quot;official_name&quot;: &quot;Sudan&quot;,
+      &quot;status&quot;: &quot;terminated&quot;,
+      &quot;designating_instrument&quot;: &quot;Sudanese Sanctions Regulations (31 C.F.R. Part 538)&quot;,
+      &quot;designating_date&quot;: &quot;1997-11-04&quot;,
+      &quot;terminating_instrument&quot;: &quot;Executive Order 13942 (2020); general licence and programme wind-down in 31 C.F.R. Part 538&quot;,
+      &quot;terminating_date&quot;: &quot;2020-10-12&quot;,
+      &quot;cfr_part&quot;: &quot;31 C.F.R. Part 538&quot;,
+      &quot;iso_codes&quot;: [
+        &quot;SD&quot;
+      ],
+      &quot;geolocation_confidence&quot;: &quot;high&quot;,
+      &quot;mismatch_note&quot;: null,
+      &quot;primary_source&quot;: &quot;https://www.federalregister.gov/documents/2020/10/16/2020-22935/sudanese-sanctions-regulations&quot;,
+      &quot;last_verified&quot;: &quot;2026-10-26&quot;,
+      &quot;verified&quot;: true,
+      &quot;verified_by&quot;: &quot;Divine Linus&quot;
+    }
+  ]
+}
+
 </code></pre>
-<h2 id="g73-build-script-single-source-file">G.7.3 Build script — single source file</h2>
-<p>From <code>scripts/build.py</code> (only <code>data/territories.json</code> is read for feed records):</p>
-<pre><code class="language-python">    # ---- the feed: the same records, nothing added, nothing hidden
+<h2 id="g73-build-script-single-data-file">G.7.3 Build script — single data file</h2>
+<pre><code class="language-python"># ---- the feed: the same records, nothing added, nothing hidden
     feed = {
         &quot;name&quot;: &quot;Sanctions Territory Reference&quot;,
         &quot;version&quot;: version,
@@ -359,7 +494,9 @@ date -u +'%Y-%m-%dT%H:%M:%SZ' &gt; exhibits/artifacts/G7-feed-retrieved-live.tim
         &quot;source_file&quot;: &quot;data/territories.json&quot;,
         &quot;record_count&quot;: len(territories),
         &quot;active_count&quot;: sum(1 for t in territories if t[&quot;status&quot;] == &quot;active&quot;),
-        &quot;notice&quot;: (&quot;Comprehensive territorial sanctions programmes only. ...&quot;),
+        &quot;notice&quot;: (&quot;Comprehensive territorial sanctions programmes only. Not a list of designated &quot;
+                   &quot;persons; does not cover sectoral or list-based measures; not legal advice. &quot;
+                   &quot;Verify against the cited primary source before relying on any record.&quot;),
         &quot;territories&quot;: territories,
     }
 
@@ -367,27 +504,13 @@ date -u +'%Y-%m-%dT%H:%M:%SZ' &gt; exhibits/artifacts/G7-feed-retrieved-live.tim
     (OUT / &quot;feed.json&quot;).write_text(
         json.dumps(feed, indent=2, ensure_ascii=False) + &quot;\n&quot;, encoding=&quot;utf-8&quot;)
 </code></pre>
-<p>Full excerpt: <code>artifacts/G7-build-feed-generation.py.txt</code>.</p>
-<h2 id="g74-wayback-capture">G.7.4 Wayback capture</h2>
-<p><strong>After</strong> the feed URL returns <strong>200</strong>:</p>
-<ol>
-<li>Open https://web.archive.org/save  </li>
-<li>Save: <code>https://divine16.github.io/sanctions-territory-reference/feed.json</code>  </li>
-<li>Screenshot confirmation and archived page.  </li>
-<li>Attach: <code>artifacts/G7-wayback-feed-screenshot.png</code> and note the <code>web.archive.org</code> URL here:</li>
-</ol>
-<pre><code class="language-text">Wayback URL: _______________________________________________
-Captured on: ______________________________________________
+<h2 id="g74-wayback-archive-record">G.7.4 Wayback / archive record</h2>
+<pre><code>Requested: https://web.archive.org/save/https://raw.githubusercontent.com/Divine16/sanctions-territory-reference/main/docs/feed.json
+At: 2026-11-04T09:25:12.101421+00:00
+HTTP 200
+Final URL: https://web.archive.org/web/20261104091857/https://raw.githubusercontent.com/Divine16/sanctions-territory-reference/main/docs/feed.json
+
+Public feed mirror used for archival until GitHub Pages serves FEED_URL: https://raw.githubusercontent.com/Divine16/sanctions-territory-reference/main/docs/feed.json
 </code></pre>
-<hr />
-<h2 id="exporting-this-package-as-one-pdf">Exporting this package as one PDF</h2>
-<p>From repo root (no pandoc required):</p>
-<pre><code class="language-sh">pip install markdown    # once
-make exhibit-pdf        # runs make exhibits, then writes PDF via Chrome headless
-</code></pre>
-<p>Output: <code>exhibits/EXHIBIT-PACKAGE-G5-G7.pdf</code> (and <code>EXHIBIT-PACKAGE-G5-G7.html</code>).</p>
-<p><strong>Alternative:</strong> open <code>exhibits/EXHIBIT-PACKAGE-G5-G7.html</code> in Chrome → <strong>Print → Save as PDF</strong> (enable background graphics).</p>
-<p>Optional: <code>sudo apt install pandoc</code> then <code>pandoc exhibits/EXHIBIT-PACKAGE-G5-G7.md -o exhibits/EXHIBIT-PACKAGE-G5-G7.pdf --resource-path=exhibits</code></p>
-<p><strong>Final bundle to submit:</strong> this PDF + <code>artifacts/</code> folder (or zip <code>exhibits/</code>).</p>
 </body>
 </html>

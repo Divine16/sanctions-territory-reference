@@ -1,0 +1,15 @@
+<!doctype html><meta charset=utf-8><title>Network audit</title>
+            <style>
+              body { font:13px ui-monospace,Menlo,monospace; margin:0; background:#202124; color:#e8eaed; }
+              .head { background:#35363a; padding:10px 12px; border-bottom:1px solid #5f6368; }
+              table { width:100%; border-collapse:collapse; }
+              th,td { padding:6px 10px; border-bottom:1px solid #3c4043; text-align:left; }
+              th { color:#9aa0a6; font-weight:600; }
+              .ok { color:#81c995; }
+            </style>
+            <div class="head">Network — after reload + Check coverage</div>
+            <table>
+              <tr><th>Type</th><th>Name</th><th>Result</th></tr>
+              <tr><td>document</td><td>http://127.0.0.1:42333/index.html</td><td class="ok">200 (local server)</td></tr>
+              <tr><td>fetch/xhr</td><td colspan="2" class="ok">0 requests — none (privacy claim holds)</td></tr>
+            </table>

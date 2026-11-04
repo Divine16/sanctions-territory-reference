@@ -1,7 +1,7 @@
 # Evidence exhibits (G.5–G.7)
 
-**Single consolidated document:** [`EXHIBIT-PACKAGE-G5-G7.md`](EXHIBIT-PACKAGE-G5-G7.md)  
-**Generated files and screenshots:** [`artifacts/`](artifacts/) · refresh with `python3 scripts/generate_exhibit_artifacts.py`
+**Complete PDF (all G.5–G.7 results):** run `make exhibit-package` from repo root → [`EXHIBIT-PACKAGE-G5-G7.pdf`](EXHIBIT-PACKAGE-G5-G7.pdf)  
+**Source markdown:** [`EXHIBIT-PACKAGE-G5-G7.md`](EXHIBIT-PACKAGE-G5-G7.md) · [`artifacts/`](artifacts/)
 
 Capture instructions for the territory reference repository. Maintainer name on
 records: **Divine Linus**.

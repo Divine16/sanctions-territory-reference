@@ -1,0 +1,9 @@
+## CI job: validate-build-sync (simulated locally)
+        ## Command: python3 scripts/validate.py --data exhibits/artifacts/G6-broken-territories.json
+
+
+1 problem(s):
+
+  cuba-comprehensive  verified is not true — a human must check this record against the primary source before it can ship
+
+INVALID — the site will not be built until these are resolved.

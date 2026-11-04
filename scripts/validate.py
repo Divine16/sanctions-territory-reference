@@ -69,14 +69,15 @@ def parse_date(value):
         return None
 
 
-def load():
-    if not DATA.exists():
-        print(f"missing data file: {DATA}", file=sys.stderr)
+def load(path=None):
+    data_path = path or DATA
+    if not data_path.exists():
+        print(f"missing data file: {data_path}", file=sys.stderr)
         sys.exit(2)
     try:
-        return json.loads(DATA.read_text(encoding="utf-8"))
+        return json.loads(data_path.read_text(encoding="utf-8"))
     except json.JSONDecodeError as exc:
-        print(f"{DATA} is not valid JSON: {exc}", file=sys.stderr)
+        print(f"{data_path} is not valid JSON: {exc}", file=sys.stderr)
         sys.exit(2)
 
 
@@ -221,9 +222,11 @@ def main():
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--staleness", type=int, metavar="DAYS",
                     help="check verification age instead of structure")
+    ap.add_argument("--data", type=pathlib.Path, metavar="FILE",
+                    help="validate alternate JSON (exhibit/CI demos only)")
     args = ap.parse_args()
 
-    doc = load()
+    doc = load(args.data)
 
     if args.staleness is not None:
         p = check_staleness(doc, args.staleness)

@@ -1,6 +1,6 @@
 # Territory records and primary-source citations
 
-Generated: 2026-11-02 19:35:32 UTC
+Generated: 2026-11-04 09:25:07 UTC
 
 | ID | Official name | Status | ISO codes | Primary source | Verified | Verified by |
 |----|---------------|--------|-----------|----------------|----------|-------------|
