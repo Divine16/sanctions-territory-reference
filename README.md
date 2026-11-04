@@ -5,6 +5,8 @@ ISO 3166 identifiers that geolocation systems actually return, with a coverage
 checker that runs entirely in the browser.
 
 **Site:** https://divine16.github.io/sanctions-territory-reference/
+
+**GitHub Pages:** Settings → Pages → **Source: GitHub Actions** (workflow `Publish site to GitHub Pages`). If deploy times out, re-run the workflow; avoid running branch-based Pages and Actions deploy at the same time.
 **Feed:** https://divine16.github.io/sanctions-territory-reference/feed.json (`docs/feed.json` in repo)
 
 Evidence package (G.5–G.7): run `make exhibit-package` → [`exhibits/EXHIBIT-PACKAGE-G5-G7.pdf`](exhibits/EXHIBIT-PACKAGE-G5-G7.pdf)
