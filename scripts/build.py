@@ -102,7 +102,10 @@ def main():
     doc = json.loads(DATA.read_text(encoding="utf-8"))
     territories = doc["territories"]
     version = doc.get("schema_version", "0.0.0")
-    built = dt.date.today().isoformat()
+    # Stable across calendar days/timezones when territory data is unchanged (CI sync).
+    built = max(
+        dt.date.fromisoformat(t["last_verified"]) for t in territories
+    ).isoformat()
 
     # ---- the feed: the same records, nothing added, nothing hidden
     feed = {
