@@ -6,10 +6,8 @@
     "Every record must carry a primary-source citation and verified:true only after",
     "a human has read that source. scripts/validate.py enforces both before build."
   ],
-
   "schema_version": "1.0.0",
   "generated_note": "Edit this file only. Run `make build` to regenerate the site and feed.",
-
   "territories": [
     {
       "id": "cuba-comprehensive",
@@ -20,12 +18,14 @@
       "terminating_instrument": null,
       "terminating_date": null,
       "cfr_part": "31 C.F.R. Part 515",
-      "iso_codes": ["CU"],
+      "iso_codes": [
+        "CU"
+      ],
       "geolocation_confidence": "high",
       "mismatch_note": null,
-      "primary_source": "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-V/part-515",
+      "primary_source": "REPLACE-ME",
       "last_verified": "2026-11-04",
-      "verified": true,
+      "verified": false,
       "verified_by": "Divine Linus"
     },
     {
@@ -37,7 +37,9 @@
       "terminating_instrument": null,
       "terminating_date": null,
       "cfr_part": "31 C.F.R. Part 560",
-      "iso_codes": ["IR"],
+      "iso_codes": [
+        "IR"
+      ],
       "geolocation_confidence": "high",
       "mismatch_note": null,
       "primary_source": "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-V/part-560",
@@ -54,7 +56,9 @@
       "terminating_instrument": null,
       "terminating_date": null,
       "cfr_part": "31 C.F.R. Part 510",
-      "iso_codes": ["KP"],
+      "iso_codes": [
+        "KP"
+      ],
       "geolocation_confidence": "high",
       "mismatch_note": null,
       "primary_source": "https://www.ecfr.gov/current/title-31/subtitle-B/chapter-V/part-510",
@@ -68,14 +72,16 @@
       "status": "terminated",
       "designating_instrument": "Executive Order 13338 (2004); Syrian Sanctions Regulations (31 C.F.R. Part 542)",
       "designating_date": "2004-05-11",
-      "terminating_instrument": "Executive Order 14312 (2025)",
+      "terminating_instrument": "Executive Order 14312 of June 30, 2025 (revocation effective July 1, 2025)",
       "terminating_date": "2025-07-01",
       "cfr_part": "31 C.F.R. Part 542 (removed from the C.F.R. effective August 26, 2025)",
-      "iso_codes": ["SY"],
+      "iso_codes": [
+        "SY"
+      ],
       "geolocation_confidence": "high",
-      "mismatch_note": "Comprehensive Syria sanctions under the Syrian Sanctions Regulations ended effective July 1, 2025. List-based measures continue under Promoting Accountability for Assad and Regional Stabilization Sanctions (PAARSS) and other authorities for designated persons and regional actors — outside this reference's comprehensive-territory scope.",
+      "mismatch_note": "E.O. 14312 was signed June 30, 2025; comprehensive Syria sanctions under the Syrian Sanctions Regulations ended effective July 1, 2025 (Sec. 3(a)). Use the effective date for geolocation perimeter updates; the signing date is the instrument date. List-based measures continue under PAARSS and other authorities for designated persons and regional actors — outside this reference's comprehensive-territory scope.",
       "primary_source": "https://www.federalregister.gov/documents/2025/07/03/2025-12506/providing-for-the-revocation-of-syria-sanctions",
-      "last_verified": "2026-11-04",
+      "last_verified": "2026-11-05",
       "verified": true,
       "verified_by": "Divine Linus"
     },
@@ -88,7 +94,9 @@
       "terminating_instrument": null,
       "terminating_date": null,
       "cfr_part": "31 C.F.R. Part 589",
-      "iso_codes": ["UA-43"],
+      "iso_codes": [
+        "UA-43"
+      ],
       "geolocation_confidence": "medium",
       "mismatch_note": "The designation follows the Crimea region; geolocation products variously return ISO 3166-2 subdivision UA-43, country-level UA, or inconsistent labels. Implementers must document which signal they treat as authoritative.",
       "primary_source": "https://www.federalregister.gov/documents/2014/12/24/2014-30194/ukraine-related-sanctions-regulations",
@@ -105,7 +113,10 @@
       "terminating_instrument": null,
       "terminating_date": null,
       "cfr_part": "31 C.F.R. Part 589",
-      "iso_codes": ["UA-14", "UA-09"],
+      "iso_codes": [
+        "UA-14",
+        "UA-09"
+      ],
       "geolocation_confidence": "low",
       "mismatch_note": "The legal perimeter follows non-government controlled areas of Donetsk and Luhansk oblasts, while ISO 3166-2 codes UA-14 and UA-09 describe entire oblasts. Blocking at oblast granularity over-blocks relative to the designation; blocking at country UA under-blocks relative to oblast-level signals. No configuration is strictly correct — only a documented choice.",
       "primary_source": "https://www.federalregister.gov/documents/2022/02/28/2022-04254/ukraine-related-sanctions-regulations",
@@ -122,7 +133,9 @@
       "terminating_instrument": "Executive Order 13761 (January 13, 2017), as amended by Executive Order 13804 (July 11, 2017)",
       "terminating_date": "2017-10-12",
       "cfr_part": "31 C.F.R. Part 538 (removed from the C.F.R. June 29, 2018)",
-      "iso_codes": ["SD"],
+      "iso_codes": [
+        "SD"
+      ],
       "geolocation_confidence": "high",
       "mismatch_note": "Darfur Sanctions Regulations (31 C.F.R. Part 546) remain in force. Sudan is not sanctions-free; only the former comprehensive Sudanese Sanctions Regulations programme reflected in Part 538 was revoked.",
       "primary_source": "https://www.federalregister.gov/documents/2018/06/29/2018-14084/removal-of-the-sudanese-sanctions-regulations-and-amendment-of-the-terrorism-list-government",
