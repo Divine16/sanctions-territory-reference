@@ -8,6 +8,10 @@ Format: `YYYY-MM-DD — territory — change — causing instrument — who`
 
 ---
 
+## 2026-11-05
+
+- 2026-11-05 — Syria — terminating_instrument now states E.O. 14312 signed 2025-06-30 with revocation effective 2025-07-01; mismatch_note clarifies signing vs effective date (aligns petition instrument date with record effective date) — E.O. 14312 Sec. 3(a) — Divine Linus
+
 ## 2026-11-04
 
 - 2026-11-04 — Sudan — corrected designating date to 1997-11-03 (E.O. 13067); terminating instrument to E.O. 13761 as amended by E.O. 13804; terminating date to 2017-10-12; primary source to 2018-06-29 Federal Register removal rule; added Darfur Part 546 note — Federal Register 2018-14084 — Divine Linus

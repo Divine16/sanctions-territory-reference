@@ -1,7 +1,7 @@
 {
   "name": "Sanctions Territory Reference",
   "version": "1.0.0",
-  "generated": "2026-11-04",
+  "generated": "2026-11-05",
   "source_file": "data/territories.json",
   "record_count": 7,
   "active_count": 5,
@@ -70,16 +70,16 @@
       "status": "terminated",
       "designating_instrument": "Executive Order 13338 (2004); Syrian Sanctions Regulations (31 C.F.R. Part 542)",
       "designating_date": "2004-05-11",
-      "terminating_instrument": "Executive Order 14312 (2025)",
+      "terminating_instrument": "Executive Order 14312 of June 30, 2025 (revocation effective July 1, 2025)",
       "terminating_date": "2025-07-01",
       "cfr_part": "31 C.F.R. Part 542 (removed from the C.F.R. effective August 26, 2025)",
       "iso_codes": [
         "SY"
       ],
       "geolocation_confidence": "high",
-      "mismatch_note": "Comprehensive Syria sanctions under the Syrian Sanctions Regulations ended effective July 1, 2025. List-based measures continue under Promoting Accountability for Assad and Regional Stabilization Sanctions (PAARSS) and other authorities for designated persons and regional actors — outside this reference's comprehensive-territory scope.",
+      "mismatch_note": "E.O. 14312 was signed June 30, 2025; comprehensive Syria sanctions under the Syrian Sanctions Regulations ended effective July 1, 2025 (Sec. 3(a)). Use the effective date for geolocation perimeter updates; the signing date is the instrument date. List-based measures continue under PAARSS and other authorities for designated persons and regional actors — outside this reference's comprehensive-territory scope.",
       "primary_source": "https://www.federalregister.gov/documents/2025/07/03/2025-12506/providing-for-the-revocation-of-syria-sanctions",
-      "last_verified": "2026-11-04",
+      "last_verified": "2026-11-05",
       "verified": true,
       "verified_by": "Divine Linus"
     },
